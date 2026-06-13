@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 
-const BASE_URL = "http://localhost:4000/api";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4000/api";
 
 const UpdateContact = () => {
   let navigate = useNavigate();
